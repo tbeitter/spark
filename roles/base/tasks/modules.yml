@@ -1,0 +1,7 @@
+---
+- name: Blacklist Modules
+  kernel_blacklist: name={{ item }} state=present
+  with_items: 
+      - pcspkr
+  tags:
+    - modules
